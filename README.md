@@ -1,7 +1,7 @@
 # terraform-aws-pokt-node
 
-[![open-issues](https://img.shields.io/github/issues-raw/insight-infrastructure/terraform-aws-pokt-node?style=for-the-badge)](https://github.com/insight-infrastructure/terraform-aws-pokt-node/issues)
-[![open-pr](https://img.shields.io/github/issues-pr-raw/insight-infrastructure/terraform-aws-pokt-node?style=for-the-badge)](https://github.com/insight-infrastructure/terraform-aws-pokt-node/pulls)
+[![open-issues](https://img.shields.io/github/issues-raw/insight-infrastructure/terraform-pokt-aws-node?style=for-the-badge)](https://github.com/insight-infrastructure/terraform-pokt-aws-node/issues)
+[![open-pr](https://img.shields.io/github/issues-pr-raw/insight-infrastructure/terraform-pokt-aws-node?style=for-the-badge)](https://github.com/insight-infrastructure/terraform-pokt-aws-node/pulls)
 
 
 ## Features
@@ -16,7 +16,7 @@ For Terraform v0.12.0+
 
 ```hcl
 module "this" {
-  source = "github.com/insight-infrastructure/terraform-aws-pokt-node"
+  source = "github.com/insight-infrastructure/terraform-pokt-aws-node"
   private_key_path = var.private_key_path
   public_key_path  = var.public_key_path
   domain_name = "insight-infra.de"
@@ -33,7 +33,7 @@ terraform destroy
 
 ## Examples
 
-- [defaults](https://github.com/insight-infrastructure/terraform-aws-pokt-node/tree/master/examples/defaults)
+- [defaults](https://github.com/insight-infrastructure/terraform-pokt-aws-node/tree/master/examples/defaults)
 
 ## Known  Issues
 No issue is creating limit on this module.
