@@ -64,11 +64,11 @@ No issue is creating limit on this module.
 | playbook\_vars | n/a | `map(string)` | `{}` | no |
 | private\_key\_path | The path to the private ssh key | `string` | n/a | yes |
 | private\_port\_cidrs | List of CIDR blocks for private ports | `list(string)` | <pre>[<br>  "172.31.0.0/16"<br>]</pre> | no |
-| private\_tcp\_ports | List of publicly tcp open ports | `list(number)` | <pre>[<br>  9100,<br>  9113,<br>  9115,<br>  8080<br>]</pre> | no |
+| private\_tcp\_ports | List of publicly tcp open ports | `list(number)` | <pre>[<br>  26657<br>]</pre> | no |
 | private\_udp\_ports | List of publicly udp open ports | `list(number)` | `[]` | no |
 | public\_key\_path | The path to the public ssh key | `string` | n/a | yes |
-| public\_tcp\_ports | List of publicly open ports | `list(number)` | <pre>[<br>  22,<br>  7100,<br>  9000<br>]</pre> | no |
-| public\_udp\_ports | List of publicly udp open ports | `list(number)` | <pre>[<br>  7100,<br>  9000<br>]</pre> | no |
+| public\_tcp\_ports | List of publicly open ports | `list(number)` | <pre>[<br>  22,<br>  8081,<br>  26656<br>]</pre> | no |
+| public\_udp\_ports | List of publicly udp open ports | `list(number)` | `[]` | no |
 | root\_iops | n/a | `string` | n/a | yes |
 | root\_volume\_size | Root volume size | `number` | `8` | no |
 | root\_volume\_type | n/a | `string` | `"gp2"` | no |

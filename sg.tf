@@ -15,18 +15,15 @@ variable "public_tcp_ports" {
   type        = list(number)
   default = [
     22,
-    7100,
-    9000,
+    8081,
+    26656,
   ]
 }
 
 variable "public_udp_ports" {
   description = "List of publicly udp open ports"
   type        = list(number)
-  default = [
-    7100,
-    9000,
-  ]
+  default     = []
 }
 
 
@@ -34,10 +31,7 @@ variable "private_tcp_ports" {
   description = "List of publicly tcp open ports"
   type        = list(number)
   default = [
-    9100,
-    9113,
-    9115,
-    8080,
+    26657,
   ]
 }
 
