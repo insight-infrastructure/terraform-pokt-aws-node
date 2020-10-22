@@ -1,0 +1,2 @@
+- https://docs.tendermint.com/master/networks/terraform-and-ansible.html
+- https://github.com/tendermint/tendermint/tree/master/networks/remote/ansible
