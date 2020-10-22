@@ -16,13 +16,17 @@ variable "public_key_path" {}
 //  keystore_path = var.keystore_path == "" ? "${path.module}/../../test/fixtures/keystores/keystore-default" : var.keystore_path
 //}
 
+
+
 module "defaults" {
-  source            = "../.."
-  network_name      = "medalla"
-  private_key_path  = var.private_key_path
-  public_key_path   = var.public_key_path
-  keystore_password = "ItWorks!!!!1"
-  keystore_path     = "${path.module}/../../test/fixtures/keystores/keystore-default"
+  source           = "../.."
+  network_name     = "testnet"
+  private_key_path = var.private_key_path
+  public_key_path  = var.public_key_path
+  //  keystore_password = "ItWorks!!!!1"
+  //  keystore_path     = "${path.module}/../../test/fixtures/keystores/keystore-default"
+  domain_name = "insight-infra.de"
+  hostname    = "pokt1"
 }
 
 output "public_ip" {

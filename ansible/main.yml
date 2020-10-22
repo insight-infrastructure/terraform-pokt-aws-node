@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  roles:
+#    - role: common
+    - role: pokt-core
+#    - role: insight_infra.ansible_role_pokt_core
+
+#    - role: volumes
+#      when: instance_store_enabled | default(false) | bool
+
+

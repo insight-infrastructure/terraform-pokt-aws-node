@@ -49,22 +49,24 @@ No issue is creating limit on this module.
 | Name | Version |
 |------|---------|
 | aws | n/a |
-| template | n/a |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
 | additional\_security\_group\_ids | List of security groups | `list(string)` | `[]` | no |
+| certbot\_admin\_email | n/a | `string` | `""` | no |
 | create | Boolean to create resources or not | `bool` | `true` | no |
 | create\_sg | Bool for create security group | `bool` | `true` | no |
+| domain\_name | variable "pokt\_username" {  } variable "pokt\_group" {} | `any` | n/a | yes |
+| force\_create | n/a | `bool` | `true` | no |
+| hostname | n/a | `any` | n/a | yes |
 | instance\_type | Instance type | `string` | `"t3.small"` | no |
 | key\_name | The key pair to import - leave blank to generate new keypair from pub/priv ssh key path | `string` | `""` | no |
-| keystore\_password | Password to keystore | `string` | n/a | yes |
-| keystore\_path | Path to keystore | `string` | n/a | yes |
-| minimum\_volume\_size\_map | Map for networks with min volume size | `map(string)` | <pre>{<br>  "mainnet": 10,<br>  "medalla": 10<br>}</pre> | no |
+| minimum\_volume\_size\_map | Map for networks with min volume size | `map(string)` | <pre>{<br>  "mainnet": 10,<br>  "testnet": 10<br>}</pre> | no |
 | name | The name for the label | `string` | `"prep"` | no |
 | network\_name | The network name, ie medalla / mainnet | `string` | n/a | yes |
+| playbook\_vars | n/a | `map(string)` | `{}` | no |
 | private\_key\_path | The path to the private ssh key | `string` | n/a | yes |
 | private\_port\_cidrs | List of CIDR blocks for private ports | `list(string)` | <pre>[<br>  "172.31.0.0/16"<br>]</pre> | no |
 | private\_tcp\_ports | List of publicly tcp open ports | `list(number)` | <pre>[<br>  9100,<br>  9113,<br>  9115,<br>  8080<br>]</pre> | no |

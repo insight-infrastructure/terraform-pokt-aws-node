@@ -1,0 +1,6 @@
+---
+
+- src: geerlingguy.certbot
+- src: geerlingguy.nginx
+- src: markosamuli.linuxbrew
+- src: insight_infra.ansible_role_pokt_core
