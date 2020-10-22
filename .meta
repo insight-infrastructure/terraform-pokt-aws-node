@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "ansible/roles/pokt-core": "https://github.com/insight-infrastructure/ansible-role-pokt-core"
+  }
+}
