@@ -1,29 +1,12 @@
-# terraform-aws-prysm-node
+# terraform-aws-pokt-node
 
-[![open-issues](https://img.shields.io/github/issues-raw/insight-infrastructure/terraform-aws-prysm-node?style=for-the-badge)](https://github.com/insight-infrastructure/terraform-aws-prysm-node/issues)
-[![open-pr](https://img.shields.io/github/issues-pr-raw/insight-infrastructure/terraform-aws-prysm-node?style=for-the-badge)](https://github.com/insight-infrastructure/terraform-aws-prysm-node/pulls)
+[![open-issues](https://img.shields.io/github/issues-raw/insight-infrastructure/terraform-aws-pokt-node?style=for-the-badge)](https://github.com/insight-infrastructure/terraform-aws-pokt-node/issues)
+[![open-pr](https://img.shields.io/github/issues-pr-raw/insight-infrastructure/terraform-aws-pokt-node?style=for-the-badge)](https://github.com/insight-infrastructure/terraform-aws-pokt-node/pulls)
 
-> Not ready - WIP
-
-## TODO
-
-- Fix deployment (compose error....)
-- port lists 
-- ssh into box / manually run user data as root to verify 
-- Replace keystore with dummy 
-- Build test so that endpoint is tested when successfully deployed 
-    - https://github.com/insight-w3f/terraform-polkadot-aws-asg/blob/master/test/terraform_defaults_test.go
-   
-```bash
-cd examples/defaults
-terraform init 
-terraform apply
-terraform destroy  
-```
 
 ## Features
 
-This module...
+This module sets up a validator nodes on the Pokt network. 
 
 ## Terraform Versions
 
@@ -33,12 +16,24 @@ For Terraform v0.12.0+
 
 ```hcl
 module "this" {
-  source = "github.com/insight-infrastructure/terraform-aws-prysm-node"
+  source = "github.com/insight-infrastructure/terraform-aws-pokt-node"
+  private_key_path = var.private_key_path
+  public_key_path  = var.public_key_path
+  domain_name = "insight-infra.de"
+  hostname    = "pokt1"
 }
 ```
+
+```bash
+cd examples/defaults
+terraform init 
+terraform apply
+terraform destroy  
+```
+
 ## Examples
 
-- [defaults](https://github.com/insight-infrastructure/terraform-aws-prysm-node/tree/master/examples/defaults)
+- [defaults](https://github.com/insight-infrastructure/terraform-aws-pokt-node/tree/master/examples/defaults)
 
 ## Known  Issues
 No issue is creating limit on this module.
