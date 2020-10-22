@@ -13,16 +13,3 @@
     force_apt_get: yes
     cache_valid_time: 86400 #One day
 
-- name: Install required packages
-  apt:
-    name: "{{ packages }}"
-    force_apt_get: yes
-    state: latest
-    update_cache: yes
-  vars:
-    packages:
-      - software-properties-common
-      - apt-transport-https
-      - ca-certificates
-      - gnupg-agent
-      - linux-aws
